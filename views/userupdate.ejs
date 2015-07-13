@@ -1,0 +1,23 @@
+	<% include ./partials/head %>
+	<main>
+		<blockquote>
+  <p>Update User</p>
+</blockquote>	
+		<div class="jumbotron">								
+			<form name="updateuser" method="post" action="" style="width:300px;">
+			 <div class="form-group" >
+			    <label for="username">User Name</label>
+			   <input type="text" id="username" placeholder="username" class="form-control" name="username" value="<%= user.username %>" />			    
+			  </div>
+			  <div class="form-group">
+			    <label for="useremail">Email Address</label>
+			   <input type="text" id="useremail" placeholder="useremail" name="useremail" class="form-control" value="<%= user.email %>" />			    
+			  </div>				
+				<input type="hidden" name="key" value="<%= user._key %>" />
+				 <div class="text-center" >
+				<input type="submit" value="Update User" class="btn btn-primary"/>
+				</div>
+			</form>
+		</div>
+	</main>
+	<% include ./partials/footer %>

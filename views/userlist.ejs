@@ -1,0 +1,18 @@
+<% include ./partials/head %>
+	<main>
+   <blockquote>
+  <p>Users</p>
+</blockquote>	
+		<ul class="list-group" style="width:300px;margin:50px;">
+            <li class="list-group-item"><a href="users/newuser" class="btn btn-primary btn-lg btn-block">Add New User</a>
+            <% for(var i=0; i < userlist.length; i++) { %>
+               <li class="list-group-item text-center">
+                   <a href="users/<%= userlist[i]._key %>">
+                    <h3><span class="label label-default"><%= userlist[i].username %></span></h3>  
+                       <%= userlist[i].email %>
+                   </a>
+               </li>
+            <% } %>
+    </ul>
+	</main>
+	<% include ./partials/footer %>

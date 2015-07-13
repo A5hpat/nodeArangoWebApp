@@ -1,0 +1,15 @@
+<% include ./partials/head %>
+	<main>
+	<blockquote>
+  <p>User info</p>
+</blockquote>	
+		<div class="jumbotron">
+			
+			<p>Name: <%= user.username %></p>
+			<p>Email: <%= user.email %></p>
+				<a href="<%= user._key %>/update" class="btn btn-primary">Update User</a>
+				<a href="<%= user._key %>/delete" class="btn btn-primary">Delete User</a>
+				<a href="/users" class="btn btn-primary">Back User List</a>				
+		</div>
+	</main>
+<% include ./partials/footer %>
